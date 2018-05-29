@@ -34,7 +34,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.http.Query;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     private RecyclerView recyclerView;
     private MoviesAdapter adapter;
@@ -232,11 +232,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onResume(){
+    public void onResume() {
         super.onResume();
-        if (movieList.isEmpty()){
+        if (movieList.isEmpty()) {
             checkSortOrder();
-        }else{
+        }else {
 
             checkSortOrder();
         }

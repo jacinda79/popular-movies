@@ -78,6 +78,25 @@
                     app:layout_constraintTop_toBottomOf="@+id/plotsynopsis"
                     app:layout_constraintLeft_toLeftOf="parent"
                     android:visibility="invisible"/>
+                
+                <TextView
+                    android:id="@+id/trailer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:text="@string/trailer"
+                    app:layout_constraintTop_toBottomOf="@+id/releasedate"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/trailer"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+                
             </android.support.constraint.ConstraintLayout>
 
         </ScrollView>
